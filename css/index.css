@@ -1,0 +1,572 @@
+/*---------------------- Page / Body / Overrides ---------------------------- */
+html, body {
+  width: auto !important;
+  overflow-x: hidden !important;
+}
+body {
+  background-color: #E6E6E6;
+  font-family: Quicksand !important;
+  font-size: 48.5%;
+}
+.section {
+  padding: 2% 5%;
+}
+.text-bold {
+  font-weight: bold;
+}
+.text-center {
+  text-align: center;
+}
+.text-right {
+  text-align: right;
+}
+.margin-left{
+  margin-left: 0.5em;
+}
+.divider {
+  background-color: #fff;
+  height: 2px;
+  width: 100%;
+}
+
+/*---------------------- Header ---------------------------- */
+#header{
+  background-color: #193441;
+  color: #fff;
+  font-size: 1.4em;
+}
+#practice-name {
+  font-size: 3.6em;
+  font-weight: bold;
+}
+#practice-name a, #practice-name a:hover, #practice-name a:active, #practice-name a:visited {
+  text-decoration: none;
+  color: #fff;
+}
+.locations{
+  margin-top: 2em;
+  font-size: 12px;
+}
+
+/* ----------------- Navbar style ----------------------------------- */
+.navbar {
+  font-size: 14px;
+}
+.navbar-toggle {
+  float: left;
+  margin-left: 10px;
+}
+.navbar-default {
+  background-color: #193441;
+  border-color: #193441;
+  border-radius: 0 !important;
+  padding: 0;
+  margin: 0;
+}
+.navbar-default .navbar-nav > li > a {
+  color: #fcfff5;
+}
+.navbar-default .navbar-nav > li > a:hover, .navbar-default .navbar-nav > li > a:focus {
+  color: #fcfff5;
+}
+.navbar-default .navbar-nav > .active > a, .navbar-default .navbar-nav > .active > a:hover, .navbar-default .navbar-nav > .active > a:focus {
+  color: #fcfff5;
+  background-color: #193441;
+}
+.navbar-default .navbar-nav > .open > a, .navbar-default .navbar-nav > .open > a:hover, .navbar-default .navbar-nav > .open > a:focus {
+  color: #fcfff5;
+  background-color: #193441;
+}
+
+/*---------------------------------------------------------------------- Carousel ---------------------------------------------------------------------------- */
+.carousel {
+  display: none;
+}
+.carousel-image {
+  background-size: cover !important;
+  font-size: 4.2em;
+  height: 70vh;
+}
+#office {
+  background: url(../images/office_crop.jpg) top center no-repeat;
+}
+#jumping {
+  background: url(../images/feet1.jpeg) center center no-repeat;
+}
+#banner-1 {
+  color:#4d4d4d;
+  padding-top: 1em;
+  text-align: left;
+  width: 60%;
+}
+#banner-2 {
+  color:#fff;
+  float: right;
+  padding-top: 1em;
+  text-align: right;
+  width: 40%;
+}
+.carousel-fade .carousel-inner .item {
+  opacity: 0;
+  transition-property: opacity;
+}
+.carousel-fade .carousel-inner .active {
+  opacity: 1;
+}
+.carousel-fade .carousel-inner .active.left,
+.carousel-fade .carousel-inner .active.right {
+  left: 0;
+  opacity: 0;
+  z-index: 1;
+}
+.carousel-fade .carousel-inner .next.left,
+.carousel-fade .carousel-inner .prev.right {
+  opacity: 1;
+}
+/*bouncing scroll down arrow*/
+@-moz-keyframes bounce {
+  0%, 20%, 50%, 80%, 100% {
+    -moz-transform: translateY(0);
+    transform: translateY(0);
+  }
+  40% {
+    -moz-transform: translateY(-30px);
+    transform: translateY(-30px);
+  }
+  60% {
+    -moz-transform: translateY(-15px);
+    transform: translateY(-15px);
+  }
+}
+@-webkit-keyframes bounce {
+  0%, 20%, 50%, 80%, 100% {
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+  }
+  40% {
+    -webkit-transform: translateY(-30px);
+    transform: translateY(-30px);
+  }
+  60% {
+    -webkit-transform: translateY(-15px);
+    transform: translateY(-15px);
+  }
+}
+@keyframes bounce {
+  0%, 20%, 50%, 80%, 100% {
+    -moz-transform: translateY(0);
+    -ms-transform: translateY(0);
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+  }
+  40% {
+    -moz-transform: translateY(-30px);
+    -ms-transform: translateY(-30px);
+    -webkit-transform: translateY(-30px);
+    transform: translateY(-30px);
+  }
+  60% {
+    -moz-transform: translateY(-15px);
+    -ms-transform: translateY(-15px);
+    -webkit-transform: translateY(-15px);
+    transform: translateY(-15px);
+  }
+}
+.bounce {
+  -moz-animation: bounce 2s infinite;
+  -webkit-animation: bounce 2s infinite;
+  animation: bounce 2s infinite;
+  bottom: 0px;
+  color:#E6E6E6;
+  font-size: 7em;
+  position: absolute;
+}
+.bounce:hover, .bounce:active, .bounce:visited {
+  color:#fff;
+}
+
+/*---------------------------------------------------------------------- Meet Our Doctors ---------------------------------------------------------------------------- */
+#our-doctors{
+  /*background-color:#E6E6E6;*/
+  background-color: #dadfe1;
+  color: #193441;
+  padding-bottom: 8em;
+  text-align: center;
+}
+#team {
+  padding-top: 1em;
+  padding-bottom: 1em;
+  text-align: center;
+}
+.our-team-attributes {
+  margin-left: 2.14em;
+  text-align: center;
+  width: 50%;
+  left: 50%;
+  position: relative;
+  transform: translateX(-50%);
+}
+#our-doctors li {
+  font-size: 16px;
+  text-align: left;
+}
+.doctor {
+  font-size: 16px;
+  padding-top: 2em;
+}
+.image-round {
+  border-radius:50%;
+  display: block;
+  margin: 0 auto;
+  width: 191px;
+  height: 191px;
+}
+.ghost-button {
+  display: inline-block;
+  margin-top: 15px;
+  border-radius: 5px;
+  width: 60%;
+  font-weight: bold;
+  font-size: 0.8em;
+  padding: 0.4em;
+  color: #193441;
+  border: 3px solid #193441;
+  text-align: center;
+  outline: none;
+  text-decoration: none;
+  transition: background-color 0.2s ease-out,
+              color 0.2s ease-out;
+}
+.ghost-button:hover, .ghost-button:active {
+  text-decoration: none;
+  background-color: #193441;
+  color: #fff;
+  transition: background-color 0.3s ease-in,
+              color 0.3s ease-in;
+}
+
+/*---------------------------------------------------------------------- Our Services ---------------------------------------------------------------------------- */
+#our-services{
+  background-color:#d3d2d7;
+  color: #193441;
+  text-align: center;
+  padding: 2% 5% 5% 5%;
+}
+.row-eq-height {
+  display: flex;
+}
+.padtop {
+  padding-top: 4em;
+}
+.border-bottom {
+  border-bottom: 1px solid #fff;
+}
+.border-top {
+  border-top: 1px solid #fff;
+}
+.border-right {
+  border-right: 1px solid #fff;
+}
+.border-left {
+  border-left: 1px solid #fff;
+}
+.border-left, .border-right {
+  background-color: #d3d2d7;
+  padding: 4px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  word-wrap: break-word;
+}
+.border-right:hover, .border-right:active, .border-left:hover, .border-left:active {
+  text-decoration: none;
+  background-color: #fff;
+  color: #fff;
+  transition: background-color 0.3s ease-in,
+              color 0.3s ease-in;
+}
+.service {
+  color: #193441;
+  font-size: 1.2em;
+}
+.row-eq-height div {
+  width: 20%;
+}
+
+/*---------------------------------------------------------------------- Our Reviews ---------------------------------------------------------------------------- */
+#our-reviews{
+  background-color:#dadfe1;
+  font-size: 1.5em;
+}
+#our-reviews h2 {
+  text-align: center;
+}
+.review {
+  margin: 0.5em;
+}
+.topdocs {
+  display: block;
+  margin: 0 auto;
+  padding-top: 3em;
+}
+.quote-right {
+  font-size: 1.2em;
+  position: relative;
+  display:inline-block;
+  max-width:800px;
+  min-height:1.5em;
+  padding: 20px;
+  background: #fff;
+  border: #7f7f7f solid 4px;
+  -webkit-border-radius: 20px;
+  -moz-border-radius: 20px;
+  border-radius: 20px;
+}
+.quote-right:before {
+  content: "";
+  position: absolute;
+  bottom: -19.5px;
+  left: calc(80% - 3px) ;
+  border-style: solid;
+  border-width: 18px 18px 0;
+  border-color: #7f7f7f transparent;
+  display: block;
+  width: 0;
+  z-index: 0;
+}
+.quote-right:after {
+  content: "";
+  position: absolute;
+  bottom: -15px;
+  left: 80%;
+  border-style: solid;
+  border-width: 15px 15px 0;
+  border-color: #fff transparent;
+  display: block;
+  width: 0;
+  z-index: 1;
+}
+.limor {
+  font-size: 2em;
+  padding-top: 2em;
+}
+.award {
+  color:#193441;
+  padding-right: 0.3em;
+}
+.rating-small {
+  color: #F4D03F;
+  padding-left: 1em;
+  font-size: 0.8em;
+}
+#apma {
+  margin-top: 4em;
+  width:239px;
+  height:83px;
+}
+#vpma {
+  width:247px;
+  height:134px;
+}
+#abps{
+  width:300px;
+  height:120px;
+}
+#acfas {
+  width:300px;
+  height:120px;
+}
+
+/*------------------------------------------------------------------------ Appointment Request --------------------------------------------------------------- */
+#request-appointment {
+  text-align: center;
+  width: 100%;
+  height: 600px;
+  background: url(../images/beach-feet.jpg) top center no-repeat;
+  background-size: cover !important;
+}
+.ghost-button-request {
+  font-size: 4em;
+  display: inline-block;
+  position: relative;
+  border-radius: 5px;
+  width: 80%;
+  max-width: 400px;
+  font-weight: bold;
+  padding: 8px;
+  color: #fff;
+  border: 5px solid #fff;
+  outline: none;
+  text-decoration: none;
+  top: 40%;
+  transition: background-color 0.2s ease-out,
+              color 0.2s ease-out;
+}
+.ghost-button-request:hover, .ghost-button-request:active {
+  background-color: #fff;
+  color: #193441;
+  text-decoration: none;
+  transition: background-color 0.3s ease-in,
+              color 0.3s ease-in;
+}
+
+/*------------------------------------------------------------------------------------- Footer ---------------------------------------------------------------- */
+.footer {
+  background-color:#193441;
+  color:#fff;
+  text-align: center;
+}
+.footer-link {
+  color: #fff;
+  display: block;
+  font-size: 14px;
+  margin: 1em;
+}
+
+/*------------------------------------------------------------------------------Our Doctors-------------------------------------------------------------------------*/
+.padded-docs{
+  font-size: 14px;
+  padding: 2% 5%;
+}
+#doc-image{
+  margin-bottom: 20px;
+}
+
+/*------------------------------------------------------------------------------Appointment Request / New Patient Forms-------------------------------------------------------------------------*/
+.padded-content{
+  font-size: 14px;
+  padding: 2% 5%;
+}
+.line-blue{
+  border-color: #193441;
+}
+.form-group .row div {
+  padding-top: 0.7em;
+  padding-bottom: 0.7em;
+}
+#preferred-doctor{
+  font-weight: 700;
+}
+#thankyou_message{
+  text-align: center;
+}
+#image-confirm{
+  width: 100%;
+  height: 70%;
+}
+#banner-3 {
+  color:#fff;
+  float: right;
+  padding-top: 1em;
+  text-align: right;
+  width: 80%;
+}
+/*------------------------------------------------------------------------------Contact Us/ Locations-------------------------------------------------------------------------*/
+.locations-banner{
+  height: 60vh;
+  width: 100%;
+  background-size: cover !important;
+  background-position: center !important;
+}
+.padded-locations{
+  padding: 2% 5%;
+  font-size: 14px;
+}
+.padded-locations h2 {
+  word-wrap: break-word;
+  font-size: 1em;
+  font-weight: bold;
+}
+
+/*------------------------------------------------------------------------------Media Queries-------------------------------------------------------------------------*/
+@media only screen and (min-width: 480px) {
+  body {
+    font-size: 50%;
+  }
+  .border-left, .border-right {
+    padding: 20px;
+  }
+  .service {
+    font-size: 2em;
+  }
+}
+@media only screen and (min-width: 768px) {
+  body {
+    font-size: 77.5%;
+  }
+  .carousel {
+    display: block;
+  }
+  .navbar .nav{
+    float: none;
+    text-align: center;
+  }
+  .navbar .nav > li{
+    float: none;
+    display: inline-block;
+  }
+  .navbar-default .navbar-nav > li > a:hover, .navbar-default .navbar-nav > li > a:focus {
+    border-bottom: 3px solid #fff;
+  }
+  .navbar-default .navbar-nav > .active > a, .navbar-default .navbar-nav > .active > a:hover, .navbar-default .navbar-nav > .active > a:focus {
+    border-bottom: 3px solid #fff;
+  }
+  #doc-image{
+    float: right;
+    padding-left: 2em;
+  }
+  .padded-docs{
+    padding: 2% 15%;
+  }
+  .padded-content{
+    padding: 2% 25%;
+  }
+  #banner-3 {
+    width: 40%;
+  }
+  .padded-locations h2 {
+    font-size: 30px;
+    font-weight: normal;
+  }
+  .locations{
+    font-size: 14px;
+  }
+  #our-doctors li {
+    font-size: 2.4em;
+  }
+  .footer-link {
+    display: inline-block;
+  }
+  #our-services h2, #our-reviews h2 {
+    text-align: left;
+    padding: 0;
+}
+}
+@media only screen and (min-width: 992px) {
+  body {
+    font-size: 100%;
+  }
+  .locations {
+    margin-top: auto;
+  }
+  #team {
+    text-align: left;
+  }
+  .our-team-attributes {
+    position: initial;
+    transform: none;
+    width:100%;
+  }
+}
+@media (max-width: 767px) {
+  .navbar-default .navbar-nav .open .dropdown-menu > li > a {
+    color: #fcfff5;
+  }
+  .navbar-default .navbar-nav .open .dropdown-menu > li > a:hover, .navbar-default .navbar-nav .open .dropdown-menu > li > a:focus {
+    color: #fcfff5;
+  }
+  .navbar-default .navbar-nav .open .dropdown-menu > .active > a, .navbar-default .navbar-nav .open .dropdown-menu > .active > a:hover, .navbar-default .navbar-nav .open .dropdown-menu > .active > a:focus {
+    color: #fcfff5;
+    background-color: #193441;
+  }
+}
