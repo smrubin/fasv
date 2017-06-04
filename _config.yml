@@ -1,0 +1,39 @@
+# Site settings
+title: Foot & Ankle Specialists of Virginia
+description: "Foot and Ankle Specialists of Virginia podiatry practice comprised of Drs. Laurence Rubin, Sonya Faircloth, and Ryan Vazales."
+baseurl: "" # the subpath of your site, e.g. /blog
+url: "http://footanklespecialistsva.com" # the name of your domain
+
+# Hero
+hero: 
+    hero_img: hero.jpg
+    hero_title: Foot & Ankle Specialists of Virginia
+    hero_description: A trusted, central Virginia podiatric practice for over 15 years.
+
+# Testimonials
+testimonials:
+    testimonials_img: jumping_feet.jpeg
+
+# Map
+map:
+    zoom: 10
+
+# Footer
+copyright: © 2017 Foot & Ankle Specialists of Virginia - All rights reserved
+
+# Build settings
+markdown: kramdown
+
+exclude: [
+    package.json,
+    Gruntfile.js,
+    node_modules,
+    .sass-cache,
+    Gemfile,
+    Gemfile.lock,
+    .gitignore
+]
+
+# Theme Settings
+analytics: UA-53213045-1
+google_verification:

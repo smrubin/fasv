@@ -1,0 +1,44 @@
+/* FORM
+-------------------------------------------------*/
+.form {
+    padding: $spaceDouble $space;
+    background: $colorBg;
+    @include breakpoint(small) {
+        padding: $spaceDouble $space;
+    }
+    input,
+    textarea {
+        @extend %form-fields;
+    }
+    textarea {
+        height: 100px;
+    }
+    .btn {
+        width: auto;
+        border: 0;
+    }
+    .form-field {
+        margin-bottom: 10px;
+    }
+}
+
+#success {
+    display: none;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    font-size: 1rem;
+
+    .checkmark {
+        width: 200px;
+        height: 200px;
+        border-radius: 50%;
+        background-color: $colorPrimary;
+        color: $white;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 72px;
+        margin-top: 20px;
+    }
+}

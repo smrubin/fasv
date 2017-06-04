@@ -1,0 +1,31 @@
+/* TREATMENTS
+-------------------------------------------------*/
+.treatments {
+    @extend %space;
+    padding-left: 15px;
+    padding-right: 15px;
+    background: $colorBg;
+    .row {
+        @include breakpoint(small) {
+            display: flex;
+            flex-wrap: wrap;
+        }
+    }
+    [class^="col-"] {
+        @include breakpoint(small) {
+            display: flex; 
+        }
+    }
+    .icon {
+        font-size: 1.5rem;
+        color: $colorPrimary;
+    }
+
+    a, a:hover, a:visited, a:active {
+        color: $colorPrimary;
+    }
+
+    h4 {
+        color: $colorPrimary;
+    }
+}

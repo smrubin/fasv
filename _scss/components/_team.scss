@@ -1,0 +1,29 @@
+/* TEAM
+-------------------------------------------------*/
+.team {
+    @extend %clearfix;
+    @extend %space;
+    overflow: hidden;
+    color: $white;
+    background: lighten($colorPrimary, 2%);
+    h2, h4 {
+        color: $white;
+    }
+    h4 {
+        padding: 10px 0 0;
+        margin: 0;
+    }
+
+    .member-box {
+        display: block;
+        text-align: center;
+        border-right: solid 1px lighten($colorPrimary, 5%);
+        padding: $space;
+        background: $colorPrimary;
+        color: $white;
+    }
+
+    img {
+        max-height: 220px;
+    }
+}

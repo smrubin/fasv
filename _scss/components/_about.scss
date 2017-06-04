@@ -1,0 +1,14 @@
+/* ABOUT
+-------------------------------------------------*/
+.about {
+    @extend %space;
+    padding-left: 15px;
+    padding-right: 15px;
+    .media {
+        margin-bottom: $space;
+    }
+
+    .media-body {
+        vertical-align: middle;
+    }
+}

@@ -1,0 +1,12 @@
+<script>
+  var loadComplete = 0;
+  function loaded() {
+      //avoid first onload
+      if(loadComplete === 0) {
+          loadComplete = 1;
+          return;
+      }
+      document.getElementById('gform').style.display = 'none';
+      document.getElementById('success').style.display = 'flex';
+  }
+</script>

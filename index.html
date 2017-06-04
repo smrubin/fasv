@@ -1,249 +1,182 @@
-<!DOCTYPE html>
-<html lang="en-US">
+---
+layout: default
+---
 
-<head>
-	<meta charset="utf-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<meta name="keywords" content="foot, ankle, podiatrist, richmond, virginia, specialists, doctor, mechanicsville, rubin, faircloth">
-	<meta name="description" content="Foot and Ankle Specialists of Virginia podiatry practice comprised of Drs. Laurence Rubin, Sonya Faircloth, and Ryan Vazales">
-	<meta name="author" content="Sam Rubin">
+<!-- Start Hero -->
+<div class="hero" style="background: url('{{ site.baseurl }}/img/{{ site.hero.hero_img }}') no-repeat; background-size: cover; background-position: center center;">
+    <div class="hero-content">
+        <div class="container-fluid">
+            <div class="hero-content-inner">
+                <h1>{{ site.hero.hero_title }}</h1>
+                <p>{{ site.hero.hero_description }}</p>
+            </div>
+        </div>
+    </div>
 
-	<title>Foot Ankle Specialists Virginia</title>
+    <div class="container-fluid">
+        
+        <div class="col-sm-6 col-sm-offset-6 col-md-4 col-md-offset-8 form">
+            <h3><svg class="icon icon-envelope-o"><use xlink:href="#icon-envelope-o"></use></svg>Request an Appointment</h3>
+            {% include form.html %}
+        </div>
 
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" />
-	<link rel="stylesheet" href="./css/index.css" />
+    </div>
+</div>
+<!-- End Hero -->
 
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
-  	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Quicksand"/>
+<!-- Start 3 columns -->
+<div class="three-shade-col">
+    {% for location in site.data.locations %}
+    <div class="col-sm-4">
+        <h3>{{ location.name }}</h3>
+        <ul>
+            <li>{{ location.phone }}</li>
+            <li>{{ location.hours }}</li>
+            <li>{{ location.address }}</li>
+        </ul>
+    </div>
+    {% endfor %}
+</div>
+<!-- End 3 columns -->
 
-  	<script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
-  	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
-</head>
+<!-- Start About -->
+<div id="about" class="about">
+    <div class="container-fluid">
+        <h2 class="section-title">About Us</h2>
 
-<body>
+        <div class="row">
+            <div class="col-sm-6">
+                <h3>Welcome to Foot & Ankle Specialists of Virginia</h3>
+                <p>We're a group of board-certified podiatrists local to the Central VA area.</p>
 
-<div id="header" class="row section">
-	<div class= "col-md-5">
-		<h1 id="practice-name"><a href="index.html">Foot and Ankle Specialists of Virginia</a></h1>
-	</div>
-	<div class="col-md-7 text-center locations">
-		<div class="row">
-			<div class="col-xs-6 col-md-3">
-				<p class="text-bold">Mechanicsville</p>
-				<p>7016 Lee Park Rd, Ste 105<br>Mechanicsville, VA 23111</p>
-				<p>804-746-5488</p>
-			</div>
-  <div class="clearfix visible-xs-block"></div>
-			<div class="col-xs-6 col-md-3">
-				<p class="text-bold">East End</p>
-				<p>1500 N. 28th St, Ste 210<br>Richmond, VA 23223</p>
-				<p>804-330-2467</p>
-			</div>
-			<div class="col-xs-6 col-md-3">
-				<p class="text-bold">Midlothian</p>
-				<p>9766 Midlothian Tpke<br>Richmond, VA 23235</p>
-				<p>804-330-2467</p>
-			</div>
-		</div>
-	</div>
+                <div class="media">
+                    <div class="media-left">
+                        <div class="boxed-icon">
+                            <svg class="icon icon-medkit"><use xlink:href="#icon-medkit"></use></svg>
+                        </div>
+                    </div>
+                    <div class="media-body">
+                        <p>40+ years of combined, board-certified experience</p>
+                    </div>
+                </div>
+
+                <div class="media">
+                    <div class="media-left">
+                        <div class="boxed-icon">
+                            <svg class="icon icon-group"><use xlink:href="#icon-group"></use></svg>
+                        </div>
+                    </div>
+                    <div class="media-body">
+                        <p>Together for over 15 years</p>
+                    </div>
+                </div>
+
+                <div class="media">
+                    <div class="media-left">
+                        <div class="boxed-icon">
+                            <svg class="icon icon-comments"><use xlink:href="#icon-comments"></use></svg>
+                        </div>
+                    </div>
+                    <div class="media-body">
+                        <p>Highly reviewed by the Central VA Community</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-6">
+                <img src="img/office.jpg" alt="...">
+            </div>
+        </div>
+    </div>
+</div>
+<!-- End About -->
+
+<!-- Start Our team -->
+<div id="team" class="team"> 
+    <h2 class="section-title">Meet the Team</h2> 
+    <div class="row">
+    {% for member in site.data.team %}
+        <div class="col-sm-4">
+            <a href="{{ site.baseurl }}/{{ member.url }}" class="member-box">
+                <img src="{{ site.baseurl }}/img/{{ member.image }}" alt="{{ member.name }}">
+                <h4>{{ member.name }}</h4>
+            </a>
+        </div>
+    {% endfor %}
+    </div>
+</div>
+<!-- End Our team -->
+
+<!-- Start Testimonials -->
+<div id="testimonials" class="testimonials parallax" style="background-image: url('{{ site.baseurl }}/img/{{ site.testimonials.testimonials_img }}');">
+    <div class="overlay-container">
+        <div class="overlay"></div>
+        <div class="container-fluid">
+            <div id="testimonial-carousel">
+                {% for testimonial in site.data.testimonials %}
+                    <div class="testimonial-item">
+                        <svg class="icon icon-quote-left"><use xlink:href="#icon-quote-left"></use></svg>
+                        <blockquote>
+                            <p>{{ testimonial.description }}</p>
+                            <footer>
+                                {{ testimonial.name }}
+                                <small>
+                                    <svg class="icon icon-star"><use xlink:href="#icon-star"></use></svg>
+                                    <svg class="icon icon-star"><use xlink:href="#icon-star"></use></svg>
+                                    <svg class="icon icon-star"><use xlink:href="#icon-star"></use></svg>
+                                    <svg class="icon icon-star"><use xlink:href="#icon-star"></use></svg>
+                                    <svg class="icon icon-star"><use xlink:href="#icon-star"></use></svg>
+                                </small>
+                            </footer>
+                        </blockquote>
+                    </div>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+</div>
+<!-- End Testimonials -->
+
+<!-- Start Treatments -->
+<div id="treatments" class="treatments">
+    <h2 class="section-title">Services</h2>
+
+    <div class="row">
+        {% for treatment in site.data.treatments %}
+            <div class="col-xs-6 col-sm-4 col-md-3">
+                <div class="icon-box">
+                    {% if treatment.url %}
+                    <a href="{{ treatment.url }}">
+                        <h4>{{ treatment.title }}</h4>
+                    </a>
+                    {% else %}
+                    <h4>{{ treatment.title }}</h4>                 
+                    {% endif %}
+                    <p>{{ treatment.description }}</p>
+                </div>
+            </div>
+        {% endfor %}
+    </div>
+
+    <div class="text-center">Powered by Foot Health Facts</div>
 </div>
 
-<div class="divider"></div>
+<!-- End Treatments -->
 
-<nav class="navbar navbar-default">
-  	<div class="container-fluid">
+<!-- Start Gallery -->
+<div id="gallery" class="gallery">
+        
+    <h2 class="section-title">Affiliations and Awards</h2>
 
-  		<div class="navbar-header">
-      		<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target=".navbar-collapse" aria-expanded="false">
-        		<span class="sr-only">Toggle navigation</span>
-        		<span class="icon-bar"></span>
-        		<span class="icon-bar"></span>
-        		<span class="icon-bar"></span>
-      		</button>
-		</div>
-
-		<div class="collapse navbar-collapse">
-	      	<ul class="nav navbar-nav">
-	    		<li class="active"><a href="index.html">Home<span class="sr-only">(current)</span></a></li>
-	    		<li class="dropdown"><a class="dropdown-toggle" href="#" data-toggle="dropdown">Our Doctors<b class="caret margin-left"></b></a>
-    				<ul class="dropdown-menu">
-						<li><a href="dr-laurence-rubin-dpm.html">Dr. Laurence G. Rubin, DPM, FACFAS</a></li>
-                        <li><a href="dr-sonya-faircloth-dpm.html">Dr. Sonya Faircloth, DPM, FACFAS</a></li>
-                	</ul>
-	    		</li>
-	    		<li><a href="appointment-request.html">Appointment Request</a></li>
-	    		<li><a href="new-patient-forms.html">New Patient Forms</a></li>
-	    		<li><a href="https://www.followmyhealth.com" target="_blank">Patient Portal</a></li>
-	    		<li><a href="contact-us--locations.html">Contact Us / Locations</a></li>
-	      	</ul>
-      	</div>
-
-  	</div>
-</nav>
-
-<div class="carousel slide carousel-fade text-center" data-interval="5000" data-ride="carousel">
-  	<div class="carousel-inner">
-    	<div id="office" class="item active section carousel-image">
-    		<p id="banner-1">A trusted, central Virginia podiatric practice for over 15 years</p>
-    	</div>
-    	<div id="jumping" class="item section carousel-image">
-    		<p id="banner-2">Top podiatrists, dedicated staff, quality care</p>
-    	</div>
-	</div> <!-- end carousel inner -->
-	<a class="bounce scroll" href="#our-doctors"><i class="fa fa-angle-down"></i></a>
-</div> <!-- /carousel -->
-
-<div class="divider"></div>
-
-<div id="our-doctors" class="row section">
-	<div class="col-md-3 text-center">
-		<h2 id="team">MEET OUR TEAM</h2>
-		<div class="our-team-attributes">
-			<ul class="fa-ul">
-				<li><i class="fa-li fa fa-check"></i>Board Certified</li>
-				<li><i class="fa-li fa fa-check"></i>60+ Combined Years of Experience</li>
-				<li><i class="fa-li fa fa-check"></i>Together for Over 15 Years</li>
-				<li><i class="fa-li fa fa-check"></i>Highly Reviewed by Central VA Community</li>
-			</ul>
-		</div>
-	</div>
-	<div class="col-md-3 col-sm-6 doctor">
-		<p>Dr. Laurence Rubin<br>DPM, FACFAS</p>
-		<img class="image-round" src="./images/rubin-round.jpg" alt="Dr. Laurence G. Rubin, DPM, FACFAS"/>
-		<a class="ghost-button" href="dr-laurence-rubin-dpm.html">Meet Dr. Rubin</a>
-	</div>
-	<div class="col-md-3 col-xs-12 doctor">
-		<p>Dr. Sonya Faircloth<br>DPM, FACFAS</p>
-		<img class="image-round" src="./images/faircloth-round.jpg" alt="Dr. Sonya Faircloth, DPM, FACFAS"/>
-		<a class="ghost-button" href="dr-sonya-faircloth-dpm.html">Meet Dr. Faircloth</a>
-	</div>
+    <div class="gallery-row">
+        {% for image in site.data.gallery %}
+            <div class="gallery-item">
+                <img src="{{ site.baseurl }}/img/gallery/{{ image.image_thumb }}" alt="{{ image.image_alt }}">
+            </div>
+        {% endfor %}
+    </div>
 </div>
+<!-- End Gallery -->
 
-<div class="divider"></div>
-
-<div id="our-services">
-	<h2 class="section">OUR SERVICES</h2>
-	<div class="row-eq-height padtop border-bottom">
-		<div class="border-right">
-			<a class="service" href="http://www.foothealthfacts.org/footankleinfo/ankle-fracture.htm" target="_blank">Ankle Fractures</a>
-		</div>
-		<div class="border-right border-left">
-			<p class="service">Ankle Joint Replacement</p>
-		</div>
-		<div class="border-right border-left">
-			<a class="service" href="http://www.foothealthfacts.org/footankleinfo/bunions.htm" target="_blank">Bunions</a>
-		</div>
-		<div class="border-right border-left">
-			<a class="service" href="http://www.foothealthfacts.org/footankleinfo/diabetic-amputations.htm" target="_blank">Diabetic Foot Care</a>
-		</div>
-		<div class="border-left">
-			<a class="service" href="http://www.foothealthfacts.org/footankleinfo/diabetic_peripheral_neuro.htm" target="_blank">Diabetic Neuropathy</a>
-		</div>
-	</div>
-	<div class="row-eq-height border-top border-bottom">
-		<div class="border-right">
-			<a class="service" href="http://www.foothealthfacts.org/Content.aspx?id=2455" target="_blank">Foot &amp; Ankle Arthroscopy</a>
-		</div>
-		<div class="border-right border-left">
-			<p class="service">Foot &amp; Ankle Reconstruction</p>
-		</div>
-		<div class="border-right border-left">
-			<a class="service" href="http://www.foothealthfacts.org/what-is/ns_fracture.htm" target="_blank">Foot Fractures</a>
-		</div>
-		<div class="border-right border-left">
-			<a class="service" href="http://www.foothealthfacts.org/footankleinfo/hammertoes.htm" target="_blank">Hammertoes</a>
-		</div>
-		<div class="border-left">
-			<a class="service" href="http://www.acfas.org/Media/Media-Resources/Heel-Pain/" target="_blank">Heel Pain</a>
-		</div>
-	</div>
-	<div class="row-eq-height border-top">
-		<div class="border-right">
-			<a class="service" href="http://www.foothealthfacts.org/footankleinfo/ingrown-toenail.htm" target="_blank">Ingrown Toenails</a>
-		</div>
-		<div class="border-right border-left">
-			<a class="service" href="http://www.foothealthfacts.org/what-is/nail-fungus.htm" target="_blank">Nail Fungus</a>
-		</div>
-		<div class="border-right border-left">
-			<a class="service" href="http://www.foothealthfacts.org/footankleinfo/mortons-neuroma.htm" target="_blank">Neuromas</a>
-		</div>
-		<div class="border-right border-left">
-			<p class="service">Toe Joint Replacement</p>
-		</div>
-		<div class="border-left">
-			<a class="service" href="http://www.foothealthfacts.org/footankleinfo/Plantar_Wart.htm" target="_blank">Warts</a>
-		</div>
-	</div>
-</div>
-
-<div class="divider"></div>
-
-<div id="our-reviews" class="section">
-	<h2>OUR REVIEWS AND AFFILIATIONS</h2>
-	<div class="row padtop">
-		<div class="col-md-4">
-			<q class="quote-right review">"Dr. Rubin is amazing! I found him to be so knowledgeable and he took the time to really understand and decide the best procedures for my foot problem. He never seemed rushed and always took the time to explain, in detail, the medical situation. I would recommend him to everyone who has any kind of foot problem- he is truly the best!"<span class="rating-small"><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><a href="https://www.ratemds.com/doctor-ratings/2414006/Dr-LAURENCE%2BG.-RUBIN-Mechanicsville-VA.html" target="_blank">RateMDs.com</a></span></q>
-		</div>
-		<div class="col-md-4">
-			<div><img id="acfas" src="./images/ACFAS.png"/ alt="American College of Foot and Ankle Surgery"></div>
-			<div class="text-right"><img id="abps" src="./images/abps.png" alt="American Board of Podiatric Surgeons"/></div>
-			<div><img id="apma" src="./images/apma-t-sm.gif" alt="American Podiatric Medical Association"/></div>
-			<div class="text-right"><img id="vpma" src="./images/vpma-2-t.gif" alt="Virginia Podiatric Medical Association"/></div>
-		</div>
-		<div class="col-md-4">
-			<q class="quote-right review">"Dr. Rubin actually gave me life again and I am forever thankful. Dr. Rubin performed a surgery on my left foot that NO other Doctor could perform. Eighteen other doctors referred me to him. He is the best!"<span class="rating-small"><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><a href="https://www.ratemds.com/doctor-ratings/2414006/Dr-LAURENCE%2BG.-RUBIN-Mechanicsville-VA.html" target="_blank">RateMDs.com</a></span></q>
-			<img class="topdocs review" src="./images/topdocs2.jpg"/>
-		</div>
-	</div>
-</div>
-
-<div class="divider"></div>
-
-<div id="request-appointment" class="section">
-	<a class="ghost-button-request" href="appointment-request.html">Request an Appointment</a>
-</div>
-
-<div class="divider"></div>
-
-<div class="footer section">
-	<a class="footer-link" href="index.html">Home</a>
-	<a class="footer-link scroll" href="#our-doctors">Our Doctors</a>
-	<a class="footer-link" href="appointment-request.html">Appointment Request</a>
-	<a class="footer-link" href="new-patient-forms.html">New Patient Forms</a>
-	<a class="footer-link" href="https://www.followmyhealth.com" target="_blank">Patient Portal</a>
-	<a class="footer-link" href="contact-us--locations.html">Contact Us / Locations</a>
-</div>
-
-<script>
- $(".scroll").click(function(event){
-	 event.preventDefault();
-	 //calculate destination place
-	 var dest=0;
-	 if($(this.hash).offset().top > $(document).height()-$(window).height()){
-	      dest=$(document).height()-$(window).height();
-	 }else{
-	      dest=$(this.hash).offset().top;
-	 }
-	 //go to destination
-	 $('html,body').animate({scrollTop:dest}, 1000,'swing');
- });
- $('.carousel').carousel({
-    pause: "false"
-});
-</script>
-
-<script>
- (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
- (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
- m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
- })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-
- ga('create', 'UA-53213045-1', 'auto');
- ga('send', 'pageview');
-
-</script>
-
-
-</body>
-</html>
+<!-- Start Map -->
+<div id="location" class="map" data-zoom="{{ site.map.zoom }}"></div>
+<!-- End Map -->

@@ -1,0 +1,48 @@
+---
+layout: default
+---
+
+<!-- Start Hero -->
+<div class="hero">
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-sm-6 col-md-8 new-patient-header">
+          <h3>New Patients, Welcome to Foot & Ankle Specialists of Virginia</h3>
+          <p>We welcome you to your first visit to Foot and Ankle Specialists of Virginia and want to establish a foundation for the future. During the first visit, we make sure to obtain important background information, like your medical history, and give you time to get to know our podiatrists and staff. To help save time at your first visit, feel free to print out, complete, and bring the patient forms below in advance of your appointment.</p>
+          <p>We look forward to you meeting our team. If you havent' already, request an appointment via our online form or contact our offices via the information below.</p>
+
+          <h4>Patient Forms</h4>
+          <p>Please print and fill out the forms below so we can expedite your first visit:</p>
+          <ul>
+            <li><a href="./pdfs/fasv_face_sheet.pdf" download>FASV Patient Form</a></li>
+            <li><a href="./pdfs/Financial Policy.pdf" download>Financial Policy</a></li>
+            <li><a href="./pdfs/Notice of Privacy Practices document.pdf" download>Notice of Privacy Practices</a></li>
+            <li><a href="./pdfs/ONLINE SURGERY INFORMATION PAckET.pdf" download>Online Surgery Information Packet</a></li>
+            <li><a href="./pdfs/Privacy Practice Signature Form.pdf" download>Privacy Practice Signature Form (HIPAA)</a></li>
+            <li><a href="./pdfs/SURGICAL INFORMATION INSTRUCTIONS.pdf" download>Surgical Information Instructions</a></li>
+          </ul>
+        </div>
+        
+        <div class="col-sm-6 col-md-4 form">
+          <h3><svg class="icon icon-envelope-o"><use xlink:href="#icon-envelope-o"></use></svg>Request an Appointment</h3>
+          {% include form.html %}
+        </div>
+      </div>
+    </div>
+</div>
+<!-- End Hero -->
+
+<!-- Start 3 columns -->
+<div class="three-shade-col">
+    {% for location in site.data.locations %}
+    <div class="col-sm-4">
+        <h3>{{ location.name }}</h3>
+        <ul>
+            <li>{{ location.phone }}</li>
+            <li>{{ location.hours }}</li>
+            <li>{{ location.address }}</li>
+        </ul>
+    </div>
+    {% endfor %}
+</div>
+<!-- End 3 columns -->

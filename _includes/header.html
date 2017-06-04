@@ -1,0 +1,46 @@
+<!-- Start Header -->
+<nav class="navbar navbar-default navbar-fixed-top">
+    <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <!--<a class="navbar-brand scroll" href="#top"><img src="{{ site.logo_url }}" alt="{{ site.title }}"></a>-->
+            {% if page.url == "/" %}
+            <a class="navbar-brand scroll" href="#top">Foot & Ankle Specialists of Virginia</a>
+            {% else %}
+            <a class="navbar-brand scroll" href="{{ site.baseurl }}/">Foot & Ankle Specialists of Virginia</a>
+            {% endif %}
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse scrollspy" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav navbar-right">
+                {% if page.url == "/" %}
+                <li><a class="scroll" href="#top">Home</a></li>
+                {% else %}
+                <li><a href="{{ site.baseurl }}/">Home</a></li>
+                {% endif %}
+                <li><a href="{{ site.baseurl }}/new-patients.html">New Patients</a></li>
+	    		<li class="dropdown"><a class="dropdown-toggle" href="#" data-toggle="dropdown">Our Doctors<b class="caret"></b></a>
+    				<ul class="dropdown-menu">
+						<li><a href="{{ site.baseurl }}/dr-laurence-rubin-dpm.html">Dr. Laurence G. Rubin, DPM, FACFAS</a></li>
+                        <li><a href="{{ site.baseurl }}/dr-sonya-faircloth-dpm.html">Dr. Sonya Faircloth, DPM, FACFAS</a></li>
+                        <li><a href="{{ site.baseurl }}/dr-ryan-vazales-dpm.html">Dr. Ryan Vazales, DPM, AACFAS</a></li>
+                	</ul>
+	    		</li>
+                {% if page.url == "/" %}
+                <li><a class="scroll" href="#treatments">Services</a></li>
+                {% else %}
+                <li><a href="{{ site.baseurl }}/#treatments">Services</a></li>
+                {% endif %}
+                <li><a href="https://www.followmyhealth.com">Patient Portal</a></li>
+            </ul>
+        </div>
+    </div>
+</nav>
+<!-- End Header -->

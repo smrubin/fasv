@@ -1,0 +1,60 @@
+/* PROFILE
+-------------------------------------------------*/
+.profile {
+  background: $colorBg;
+
+  &-hero {
+    height: 500px;
+    background-image: url('../img/office.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    @include breakpoint(xsmall) {
+        display: none;
+    }
+  }
+
+  .container-fluid {
+    padding-bottom: 30px;
+    @include breakpoint(xsmall) {
+        padding-top: 200px;
+    }
+  }
+
+  h2, h4 {
+    text-align: center;
+  }
+
+  h4 {
+    padding-bottom: 10px;
+    margin-bottom: 30px;
+    border-bottom: 1px solid $greyLight;
+  }
+
+  .list-header {
+    margin-top: 20px;
+    font-weight: bold;
+  }
+
+  .image-wrapper {
+    height: 200px;
+    width: 200px;
+    overflow: hidden;
+    border-radius: 50%;
+    background-color: $white;
+    border: 10px solid $colorPrimary;
+    margin: -100px auto 0;
+
+    img {
+      width: 100%;
+      height: auto;
+      max-width: none;
+
+      &#rubin {
+        width: auto;
+        height: 100%;
+      }
+    }
+  }
+
+}

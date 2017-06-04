@@ -1,0 +1,35 @@
+/* GALLERY
+-------------------------------------------------*/
+.gallery {
+    @extend %clearfix;
+    @extend %space;
+}
+
+.gallery-row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.gallery-item {
+    position: relative;
+    float: left;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px 10px;
+    @include breakpoint(lsmall) {
+        width: 50%;
+    }
+    @include breakpoint(small) {
+        width: 20%;
+    }
+    .icon {
+        font-size: 2rem;
+    }
+
+    img {
+        max-height: 200px;
+    }
+}
