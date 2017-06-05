@@ -45,14 +45,34 @@
     border: 10px solid $colorPrimary;
     margin: -100px auto 0;
 
+    &.faircloth {
+      background-color: #F5F4F9;
+    }
+
+    &.vazales {
+      background-color: #A8A7A5;
+    }
+
     img {
       width: 100%;
       height: auto;
       max-width: none;
 
-      &#rubin {
+      &.rubin {
         width: auto;
-        height: 100%;
+        height: 150%;
+        margin-left: -60px;
+      }
+
+      &.faircloth {
+        width: 80%;
+        margin-left: 20px;
+        margin-top: 5px;
+      }
+
+      &.vazales {
+        width: 80%;
+        margin-left: 20px;
       }
     }
   }
