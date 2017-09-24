@@ -1,0 +1,187 @@
+---
+layout: default
+---
+
+<!-- Start Hero -->
+<div class="hero" style="background: url('{{ site.baseurl }}/img/{{ site.hero.hero_img }}') no-repeat; background-size: cover; background-position: center center;">
+    <div class="hero-content">
+        <div class="container-fluid">
+            <div class="hero-content-inner">
+                <h1>{{ site.hero.hero_title }}</h1>
+                <p>{{ site.hero.hero_description }}</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="container-fluid">
+
+        <div class="col-sm-6 col-sm-offset-6 col-md-4 col-md-offset-8 form">
+            <h3><svg class="icon icon-envelope-o"><use xlink:href="#icon-envelope-o"></use></svg>Request an Appointment</h3>
+            {% include form-success.html %}
+        </div>
+
+    </div>
+</div>
+<!-- End Hero -->
+
+<!-- Start 3 columns -->
+<div class="three-shade-col">
+    {% for location in site.data.locations %}
+    <div class="col-sm-4">
+        <h3>{{ location.name }}</h3>
+        <ul>
+            <li>{{ location.phone }}</li>
+            <li>{{ location.hours }}</li>
+            <li>{{ location.address }}</li>
+        </ul>
+    </div>
+    {% endfor %}
+</div>
+<!-- End 3 columns -->
+
+<!-- Start About -->
+<div id="about" class="about">
+    <div class="container-fluid">
+        <h2 class="section-title">About Us</h2>
+
+        <div class="row">
+            <div class="col-sm-6">
+                <h3>Welcome to Foot & Ankle Specialists of Virginia</h3>
+
+                <div class="media">
+                    <div class="media-left">
+                        <div class="boxed-icon">
+                            <svg class="icon icon-medkit"><use xlink:href="#icon-medkit"></use></svg>
+                        </div>
+                    </div>
+                    <div class="media-body">
+                        <p>40+ years of combined, board-certified experience</p>
+                    </div>
+                </div>
+
+                <div class="media">
+                    <div class="media-left">
+                        <div class="boxed-icon">
+                            <svg class="icon icon-group"><use xlink:href="#icon-group"></use></svg>
+                        </div>
+                    </div>
+                    <div class="media-body">
+                        <p>Together for over 20 years</p>
+                    </div>
+                </div>
+
+                <div class="media">
+                    <div class="media-left">
+                        <div class="boxed-icon">
+                            <svg class="icon icon-comments"><use xlink:href="#icon-comments"></use></svg>
+                        </div>
+                    </div>
+                    <div class="media-body">
+                        <p>Highly reviewed by the Central VA Community</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-6">
+                <img src="img/office.jpg" alt="...">
+            </div>
+        </div>
+
+        <div class="news">
+            <h3 class="section-title">Recent News</h3>
+            <h4><i>Foot & Ankle Specialists of Virginia welcomes Dr. Ryan Vazales to the practice.  -August, 2017</i></h4>
+            <h4><i>Dr. Rubin inducted as 66th president of the American College of Foot & Ankle Surgeons.  -March, 2017</i></h4>
+        </div>
+    </div>
+</div>
+<!-- End About -->
+
+<!-- Start Our team -->
+<div id="team" class="team">
+    <h2 class="section-title">Meet the Team</h2>
+    <div class="row">
+    {% for member in site.data.team %}
+        <div class="col-sm-4">
+            <a href="{{ site.baseurl }}/{{ member.url }}" class="member-box">
+                <img src="{{ site.baseurl }}/img/{{ member.image }}" alt="{{ member.name }}">
+                <h4>{{ member.name }}</h4>
+            </a>
+        </div>
+    {% endfor %}
+    </div>
+</div>
+<!-- End Our team -->
+
+<!-- Start Testimonials -->
+<div id="testimonials" class="testimonials parallax" style="background-image: url('{{ site.baseurl }}/img/{{ site.testimonials.testimonials_img }}');">
+    <div class="overlay-container">
+        <div class="overlay"></div>
+        <div class="container-fluid">
+            <div id="testimonial-carousel">
+                {% for testimonial in site.data.testimonials %}
+                    <div class="testimonial-item">
+                        <svg class="icon icon-quote-left"><use xlink:href="#icon-quote-left"></use></svg>
+                        <blockquote>
+                            <p>{{ testimonial.description }}</p>
+                            <footer>
+                                {{ testimonial.name }}
+                                <small>
+                                    <svg class="icon icon-star"><use xlink:href="#icon-star"></use></svg>
+                                    <svg class="icon icon-star"><use xlink:href="#icon-star"></use></svg>
+                                    <svg class="icon icon-star"><use xlink:href="#icon-star"></use></svg>
+                                    <svg class="icon icon-star"><use xlink:href="#icon-star"></use></svg>
+                                    <svg class="icon icon-star"><use xlink:href="#icon-star"></use></svg>
+                                </small>
+                            </footer>
+                        </blockquote>
+                    </div>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+</div>
+<!-- End Testimonials -->
+
+<!-- Start Treatments -->
+<div id="treatments" class="treatments">
+    <h2 class="section-title">Services</h2>
+
+    <div class="row">
+        {% for treatment in site.data.treatments %}
+            <div class="col-xs-6 col-sm-4 col-md-3">
+                <div class="icon-box">
+                    {% if treatment.url %}
+                    <a href="{{ treatment.url }}">
+                        <h4>{{ treatment.title }}</h4>
+                    </a>
+                    {% else %}
+                    <h4>{{ treatment.title }}</h4>
+                    {% endif %}
+                    <p>{{ treatment.description }}</p>
+                </div>
+            </div>
+        {% endfor %}
+    </div>
+
+    <div class="text-center">Powered by Foot Health Facts</div>
+</div>
+
+<!-- End Treatments -->
+
+<!-- Start Gallery -->
+<div id="gallery" class="gallery">
+
+    <h2 class="section-title">Affiliations and Awards</h2>
+
+    <div class="gallery-row">
+        {% for image in site.data.gallery %}
+            <div class="gallery-item">
+                <img src="{{ site.baseurl }}/img/gallery/{{ image.image_thumb }}" alt="{{ image.image_alt }}">
+            </div>
+        {% endfor %}
+    </div>
+</div>
+<!-- End Gallery -->
+
+<!-- Start Map -->
+<div id="location" class="map" data-zoom="{{ site.map.zoom }}"></div>
+<!-- End Map -->
