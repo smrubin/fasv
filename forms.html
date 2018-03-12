@@ -1,0 +1,42 @@
+---
+layout: default
+---
+
+<!-- Start Hero -->
+<div class="hero">
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-sm-6 col-md-8 new-patient-header">
+          <h3>Patient Forms</h3>
+          <p>If you need to update forms or you are a new patient, please print and fill out the forms below so we can expedite your visit:</p>
+          <ul>
+            <li><a href="./pdfs/fasv_face_sheet.pdf" download>FASV Patient Form</a></li>
+            <li><a href="./pdfs/Financial Policy.pdf" download>Financial Policy</a></li>
+            <li><a href="./pdfs/Notice of Privacy Practices document.pdf" download>Notice of Privacy Practices</a></li>
+            <li><a href="./pdfs/Privacy Practice Signature Form.pdf" download>Privacy Practice Signature Form (HIPAA)</a></li>
+          </ul>
+        </div>
+
+        <div class="col-sm-6 col-md-4 form">
+          <h3><svg class="icon icon-envelope-o"><use xlink:href="#icon-envelope-o"></use></svg>Request an Appointment</h3>
+          {% include form.html %}
+        </div>
+      </div>
+    </div>
+</div>
+<!-- End Hero -->
+
+<!-- Start 3 columns -->
+<div class="three-shade-col">
+    {% for location in site.data.locations %}
+    <div class="col-sm-4">
+        <h3>{{ location.name }}</h3>
+        <ul>
+            <li>{{ location.phone }}</li>
+            <li>{{ location.hours }}</li>
+            <li>{{ location.address }}</li>
+        </ul>
+    </div>
+    {% endfor %}
+</div>
+<!-- End 3 columns -->
