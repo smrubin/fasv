@@ -5,7 +5,7 @@ baseurl: "" # the subpath of your site, e.g. /blog
 url: "http://footanklespecialistsva.com" # the name of your domain
 
 # Hero
-hero: 
+hero:
     hero_img: hero.jpg
     hero_title: Foot & Ankle Specialists of Virginia
     hero_description: A trusted, central Virginia practice for over 20 years.
@@ -19,7 +19,7 @@ map:
     zoom: 10
 
 # Footer
-copyright: © 2017 Foot & Ankle Specialists of Virginia - All rights reserved
+copyright: © 2019 Foot & Ankle Specialists of Virginia - All rights reserved
 
 # Build settings
 markdown: kramdown
