@@ -1,0 +1,10 @@
+/* SPONSOR
+-------------------------------------------------*/
+.sponsor {
+    @extend %space;
+    text-align: center;
+
+    &-image {
+        width: 100px;
+    }
+}

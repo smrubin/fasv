@@ -14,7 +14,7 @@ layout: default
     </div>
 
     <div class="container-fluid">
-        
+
         <div class="col-sm-6 col-sm-offset-6 col-md-4 col-md-offset-8 form">
             <h3><svg class="icon icon-envelope-o"><use xlink:href="#icon-envelope-o"></use></svg>Request an Appointment</h3>
             {% include form.html %}
@@ -96,8 +96,8 @@ layout: default
 <!-- End About -->
 
 <!-- Start Our team -->
-<div id="team" class="team"> 
-    <h2 class="section-title">Meet the Team</h2> 
+<div id="team" class="team">
+    <h2 class="section-title">Meet the Team</h2>
     <div class="row">
     {% for member in site.data.team %}
         <div class="col-sm-4">
@@ -154,7 +154,7 @@ layout: default
                         <h4>{{ treatment.title }}</h4>
                     </a>
                     {% else %}
-                    <h4>{{ treatment.title }}</h4>                 
+                    <h4>{{ treatment.title }}</h4>
                     {% endif %}
                     <p>{{ treatment.description }}</p>
                 </div>
@@ -169,7 +169,7 @@ layout: default
 
 <!-- Start Gallery -->
 <div id="gallery" class="gallery">
-        
+
     <h2 class="section-title">Affiliations and Awards</h2>
 
     <div class="gallery-row">
@@ -185,3 +185,10 @@ layout: default
 <!-- Start Map -->
 <div id="location" class="map" data-zoom="{{ site.map.zoom }}"></div>
 <!-- End Map -->
+
+<!-- Start Sponsor -->
+<div class="sponsor">
+    <h4>Proud Sponsors of the <a href="https://livered.org/" rel="noopener noreferrer" target="_blank">Live Red Foundation</a></h4>
+    <img class="sponsor-image" src="{{ site.baseurl }}/img/livered.png" alt="Live Red Foundation">
+</div>
+<!-- End Sponsor -->
