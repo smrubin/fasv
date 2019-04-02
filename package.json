@@ -1,12 +1,12 @@
 {
   "name": "fasv",
   "version": "1.0.0",
-  "description": "",
-  "main": "Gruntfile.js",
+  "description": "Website for Foot and Ankle Specialists of VA",
+  "main": "index.html",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "jekyll build"
   },
-  "author": "",
+  "author": "Sam Rubin <smrubin>",
   "license": "ISC",
   "devDependencies": {
     "grunt": "^0.4.5",
