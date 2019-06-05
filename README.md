@@ -4,6 +4,12 @@ A single page Jekyll theme. Customizable, responsive, andcomes with svg icons, g
 
 Here is the [live site](https://footanklespecialistsva.com)
 
+### Local Development
+
+Serve with `jekyll serve`
+
+### Build
 Build with `jekyll build`
 
+### Deploy
 To Upload to S3 Bucket: aws s3 cp _site/. s3://YOUR_BUCKET_NAME/ --recursive
