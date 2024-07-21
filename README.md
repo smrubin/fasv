@@ -4,9 +4,23 @@ A single page Jekyll theme. Customizable, responsive, and comes with svg icons, 
 
 Here is the [live site](https://footanklespecialistsva.com)
 
+### Prerequisites
+
+Jekyll setup guide for macOS: https://jekyllrb.com/docs/installation/macos/
+
+* rbenv: https://github.com/rbenv/rbenv
+* ruby
+
+When configuring ruby version, set for local directory via `rbenv local ${ruby_version}`.
+
+### Install Dependencies
+
+* Run `bundle` to install ruby gem dependencies
+* npm install
+
 ### Local Development
 
-Serve with `npm run serve`
+Run `npm run start`.
 
 ### Build
 Build with `npm run build`
