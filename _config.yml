@@ -39,7 +39,9 @@ exclude: [
     Gemfile.lock,
     .gitignore,
     README.md,
-    js
+    webpack.config.js,
+    js,
+
 ]
 
 # Theme Settings
