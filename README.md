@@ -11,6 +11,9 @@ Jekyll setup guide for macOS: https://jekyllrb.com/docs/installation/macos/
 * rbenv: https://github.com/rbenv/rbenv
 * ruby
 
+* nvm
+* node
+
 When configuring ruby version, set for local directory via `rbenv local ${ruby_version}`.
 
 ### Install Dependencies
