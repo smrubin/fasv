@@ -4,8 +4,8 @@
   "description": "Website for Foot and Ankle Specialists of VA",
   "main": "index.html",
   "scripts": {
-    "build": "jekyll build",
-    "serve": "jekyll serve"
+    "start": "bundle exec jekyll serve --livereload",
+    "build": "jekyll build"
   },
   "author": "Sam Rubin <smrubin>",
   "license": "ISC",
