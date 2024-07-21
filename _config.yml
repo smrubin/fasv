@@ -1,8 +1,8 @@
 # Site settings
 title: Foot & Ankle Specialists of Virginia
-description: "Foot and Ankle Specialists of Virginia podiatry practice comprised of Drs. Laurence Rubin and Sonya Faircloth."
+description: "Foot and Ankle Specialists of Virginia podiatry practice comprised of Drs. Laurence Rubin, Sonya Faircloth, and Sarah Tammaro."
 baseurl: "" # the subpath of your site, e.g. /blog
-url: "http://footanklespecialistsva.com" # the name of your domain
+url: "https://footanklespecialistsva.com" # the name of your domain
 
 # Hero
 hero:
@@ -19,7 +19,7 @@ map:
     zoom: 10
 
 # Footer
-copyright: © 2020 Foot & Ankle Specialists of Virginia - All rights reserved
+copyright: © 2024 Foot & Ankle Specialists of Virginia - All rights reserved
 
 # Build settings
 markdown: kramdown

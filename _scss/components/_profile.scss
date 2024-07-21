@@ -49,6 +49,10 @@
       background-color: #F5F4F9;
     }
 
+    &.tammaro {
+      background-color: #A8A7A5;
+    }
+
     img {
       width: 100%;
       height: auto;
@@ -64,6 +68,11 @@
         width: 80%;
         margin-left: 20px;
         margin-top: 5px;
+      }
+
+      &.tammaro {
+        width: 80%;
+        margin-left: 20px;
       }
     }
   }
