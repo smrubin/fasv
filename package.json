@@ -4,12 +4,11 @@
   "description": "Website for Foot and Ankle Specialists of VA",
   "main": "index.html",
   "scripts": {
-    "start": "concurrently --kill-others \"npx webpack\" \"bundle exec jekyll serve --livereload\"",
+    "start": "npx webpack && bundle exec jekyll serve --livereload",
     "build": "jekyll build"
   },
   "author": "Sam Rubin <smrubin>",
   "devDependencies": {
-    "concurrently": "^8.2.2",
     "webpack": "^5.93.0",
     "webpack-cli": "^5.1.4"
   }
