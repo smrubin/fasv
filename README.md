@@ -28,9 +28,8 @@ Run `npm run start`.
 Site is served on localhost:4000.
 
 ### Build
-Build with `npm run build`
 
-TODO - Need to replace build system. For now, be on Node v6 and run grunt commands individually via `npx grunt ...` then run `jekyll build`. 
+Build with `npm run build`
 
 ### Deploy
 To Upload to S3 Bucket: aws s3 cp _site/. s3://YOUR_BUCKET_NAME/ --recursive --profile PROFILE_NAME
