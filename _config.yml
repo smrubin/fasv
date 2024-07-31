@@ -40,8 +40,7 @@ exclude: [
     .gitignore,
     README.md,
     webpack.config.js,
-    js,
-
+    js/src,
 ]
 
 # Theme Settings
