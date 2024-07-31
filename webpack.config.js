@@ -11,6 +11,5 @@ module.exports = {
     output: {
         filename: 'all.min.js',
         path: path.resolve(__dirname, 'js/dist'),
-    },
-    watch: true,
+    }
 };
