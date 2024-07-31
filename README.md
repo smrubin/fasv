@@ -32,3 +32,9 @@ TODO - Need to replace build system. For now, be on Node v6 and run grunt comman
 
 ### Deploy
 To Upload to S3 Bucket: aws s3 cp _site/. s3://YOUR_BUCKET_NAME/ --recursive --profile PROFILE_NAME
+
+### TODO
+
+* Implement new build system for svg assets after removing grunt and plugins:
+  * Minify svg assets using webpack / svgo
+  * Then, combine svg assets into one svg asset via something like https://github.com/svgstore/svgstore
