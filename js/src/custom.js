@@ -56,8 +56,8 @@
                     data: "<p>Midlothian Location</p><p>804-330-2467</p><p>9766 Midlothian Turnpike, Richmond, VA 23235</p>"
                 },
                 {
-                    address: "1500 N. 28th Street, Suite #210, Richmond, VA 23223",
-                    data: "<p>East End Location</p><p>804-330-2467</p><p>1500 N. 28th Street, Suite #210, Richmond, VA 23223</p>"
+                    address: "1510 N. 28th Street, Suite #110, Richmond, VA 23223",
+                    data: "<p>East End Location</p><p>804-330-2467</p><p>1510 N. 28th Street, Suite #110, Richmond, VA 23223</p>"
                 }],
                 options:{
                     draggable: false
